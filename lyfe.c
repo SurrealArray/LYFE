@@ -41,20 +41,20 @@ int main(){
     while(health > 0) {    //Runs the program as long as user maintains health about 0
         //main menu displayed with options for player to choose
         printf("\n");
-        printf(" -----------------------------------------------------------------------------\n |");
+        printf(" -----------------------------------------------------------------------\n |");
         for(i = 0; i <= 46; i++){
             printf("%c", aB);
         }
         printf("|  Year: %d   Day: %d \n", currentYear, currentDay);
-        printf(" |%c%c|-----------------------------------------|%c%c|----------------------------\n", aB, aB, aB, aB);
-        printf(" |%c%c| %c%c       %c%c       %c%c %c%c%c%c%c%c%c%c %c%c%c%c%c%c%c%c%c |%c%c| Health (%d)\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, health);
+        printf(" |%c%c|-----------------------------------------|%c%c|----------------------\n", aB, aB, aB, aB);
+        printf(" |%c%c| %c%c       %c%c       %c%c %c%c%c%c%c%c%c%c %c%c%c%c%c%c%c%c%c |%c%c| Health    (%d)\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, health);
         printf(" |%c%c| %c%c        %c%c     %c%c  %c%c       %c%c        |%c%c| Stomach    (%d)\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, stomach);
-        printf(" |%c%c| %c%c         %c%c   %c%c   %c%c       %c%c        |%c%c| Happiness  (%d)\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, happiness);
+        printf(" |%c%c| %c%c         %c%c   %c%c   %c%c       %c%c        |%c%c| Happiness    (%d)\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, happiness);
         printf(" |%c%c| %c%c          %c%c %c%c    %c%c%c%c%c%c%c  %c%c%c%c%c%c%c%c%c |%c%c| Current Car: %s\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, strCar);
         printf(" |%c%c| %c%c           %c%c%c     %c%c       %c%c        |%c%c| Debt: $%d\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, currentDebt);
         printf(" |%c%c| %c%c           %c%c%c     %c%c       %c%c        |%c%c| Age: %d\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, playerAge);
         printf(" |%c%c| %c%c%c%c%c%c%c%c%c    %c%c%c     %c%c       %c%c%c%c%c%c%c%c%c |%c%c| Real Estate: %s\n", aB, aB, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aL, aB, aB, strRealEstate);
-        printf(" |%c%c|-----------------------------------------|%c%c|----------------------------\n |", aB, aB, aB, aB);
+        printf(" |%c%c|-----------------------------------------|%c%c|----------------------\n |", aB, aB, aB, aB);
         for(i = 0; i <= 46; i++){
             printf("%c", aB);
         }
@@ -2031,11 +2031,21 @@ int main(){
         }
         //Option 0
         if(userInput == 0){ //Quit
-            printf("Are you sure you would like to quit?\n");
-            printf("(Note: Quitting will automatically kill your player!)\n");
-            printf("    Yes (1)            No(0)\n\n");
             health = 0;
-            clrScr();
+            // printf("Are you sure you would like to quit?\n");
+            // printf("(Note: Quitting will automatically kill your player!)\n");
+            // printf("    Yes (1)            No(0)\n\n");
+            // scanf("%d", &userInput2);
+            // if(userInput2 == 1){
+            //     health = 0;
+            //     system("clear");
+            // }
+            // else if(userInput2 == 0){
+            //     system("clear");
+            // }
+            // else{
+            //     system("clear");
+            // }
         }
         if(mileageSedan >= 300000 || mileageCheapCar >= 300000 || mileageSuperCar >= 300000){ //car will stop running at 300000 miles
             if(mileageCheapCar >= 300000){
